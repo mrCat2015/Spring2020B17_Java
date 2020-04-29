@@ -25,16 +25,16 @@ public class SMSmessage_074 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         String message = scan.nextLine();
-
-        String sender = scan.nextLine();
-
-        System.out.println("Enter phone number:");
-        String phoneNumber = scan.nextLine();
-
-        System.out.println("Enter your message:");
-        String messageBody = scan.nextLine();
-
-        String result = "Sender: "+sender+"\n"+"Phone Number: " + phoneNumber + "\n"+"Message body: "+messageBody;
-        System.out.println(result);
+        int greater = message.indexOf("<");
+        int smaller =  message.indexOf(">");
+        String sender = message.substring(greater+1, smaller);
+        int number1 = message.indexOf("[");
+        int number2 = message.indexOf("]");
+        String phoneNumber = message.substring(number1+1, number2);
+        int Message = message.indexOf("{");
+        String messageBody = message.substring(Message+1, message.length()-1);
+        System.out.println("Sender: "+sender);
+        System.out.println("Phone Number: "+phoneNumber);
+        System.out.println("Message body: "+messageBody);
     }
 }

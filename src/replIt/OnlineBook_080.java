@@ -14,7 +14,7 @@ public class OnlineBook_080 {
         boolean isPremiumCustomer = scan.nextBoolean();
         int nbooksPurchased = scan.nextInt();
 
-        if(isPremiumCustomer==true && nbooksPurchased >= 5 || nbooksPurchased < 8){
+        if(isPremiumCustomer == true && (nbooksPurchased >= 5 && nbooksPurchased < 8)){
             freeBooks += 1;
 
         }
@@ -22,15 +22,14 @@ public class OnlineBook_080 {
             freeBooks += 2;
 
         }
-        else if(isPremiumCustomer == false && nbooksPurchased >= 7 || nbooksPurchased < 12){
+        else if(isPremiumCustomer == false && (nbooksPurchased >= 7 && nbooksPurchased < 12)){
             freeBooks += 1;
         }
         else if(isPremiumCustomer ==false && nbooksPurchased >= 12){
             freeBooks += 2;
 
 
-        }else{
-            freeBooks = 0;
+
 
         }
         System.out.println(freeBooks);

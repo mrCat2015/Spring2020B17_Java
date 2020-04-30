@@ -190,13 +190,11 @@ public class CarInsurance_078 {
         System.out.println("What is the highest level of education you have completed?");
         education = scan.next();
 
-        if(education.equalsIgnoreCase("PhD")
-                || education.equalsIgnoreCase("Bachelors")
-                || education.equalsIgnoreCase("Masters")){
-            premium -= premium * 0.05;
-        }else if(education.equalsIgnoreCase("Doctors")){
-            premium -= premium * 0.10;
-        }else if(education.equalsIgnoreCase("Less than High School")){
+        if (education.equalsIgnoreCase("PhD")|| education.startsWith("Bachelors")|| education.startsWith("Masters")) {
+            premium -= (premium * 0.05);
+        } else if (education.startsWith("Doctors")) {
+            premium -= (premium * 0.10);
+        } else if (education.startsWith("Less than High School")) {
             premium += premium * 0.05;
         }
 

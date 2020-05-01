@@ -60,6 +60,13 @@ public class CollectionsMethods {
         Collections.swap(list3, 0, 4);
         System.out.println(list3);
 
+        System.out.println("======================================");
+        ArrayList<String> names = new ArrayList<>();
+        names.addAll(Arrays.asList("Omer", "Omer", "Mary", "Sha", "Fatih", "Omer"));  // Irina
+        Collections.replaceAll(names, "Omer", "Irina");
+        System.out.println(names);
+
+
 
 
 

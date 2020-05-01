@@ -33,6 +33,8 @@ public class ArrayList_Unique {
             if(count == 1){
                 uniques.add(list.get(i));
             }
+
+
         }
 
         System.out.println(uniques);

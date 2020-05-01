@@ -20,15 +20,16 @@ import java.util.Scanner;
 
 public class HasJavaLoop_087 {
     public static void main(String[] args) {
-       // Scanner scan = new Scanner(System.in);
-      //  String word = scan.next();
-       // boolean exists = false;
+        boolean exists = false;
+        Scanner scan = new Scanner(System.in);
+        String word = scan.next();
+
+        String a = "java";
+
+        if(word.contains(a.toLowerCase())){
+
+        }
 
 
-        String txt = "foo bar";
-        int a = txt.indexOf("b");
-        System.out.println(a);
-        int b = txt.indexOf("foo");
-        System.out.println(b);
     }
 }

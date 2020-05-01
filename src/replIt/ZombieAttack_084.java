@@ -27,20 +27,24 @@ public class ZombieAttack_084 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int inhabitants = scan.nextInt();
-
-        int day = -1;
-
-
-     for(int i = 0; i < inhabitants; i++){
-           day ++;
-           inhabitants = inhabitants / 2;
-         System.out.println("Day " + day + "["+ inhabitants+"]");
-
-
-    }
-
-
+        int count=0;
+        int result=0;
+        String day="";
+        for (int i = inhabitants; i >= 0; i--){
+            result=inhabitants;
+            inhabitants=inhabitants/2;
+            day="Day "+count;
+            count++;
+            if (result==0){
+                break;
+            }
+            System.out.println(day+" ["+result+"]");
         }
+        System.out.println("---- EXTINCT ----");
+
 
     }
+}
+
+
 

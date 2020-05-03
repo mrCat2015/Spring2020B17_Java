@@ -26,9 +26,19 @@ public class HasJavaLoop_087 {
 
         String a = "java";
 
-        if(word.contains(a.toLowerCase())){
+        if(word.length() < 4){
+            exists = false;
 
+        }else{
+            if(word.substring(0, 4).equals(a) || word.substring(1, 5).equals(a)){
+                exists = true;
+            }else{
+                exists = false;
+            }
         }
+
+
+        System.out.println(exists);
 
 
     }

@@ -25,11 +25,18 @@ public class Methods_With_ArrayList_delivery_Calc {
     {
 
         int sumDel = 0;
+        int result = 0;
         for(Integer each: deliveries){
             sumDel += each;
         }
 
-        int result = sumDel / max_fuel;
+        if(sumDel % max_fuel == 0 ){
+            result = sumDel / max_fuel ;
+        }else{
+            result = sumDel / max_fuel + 1;
+        }
+
+
 
         return result;
 
@@ -42,7 +49,7 @@ public class Methods_With_ArrayList_delivery_Calc {
         arr.add(3);
         arr.add(3);
         arr.add(1);
-        arr.add(2);
+        arr.add(3);
         arr.add(6);
         int max_fuel = 3;
         int times = refuel_times(arr,max_fuel);

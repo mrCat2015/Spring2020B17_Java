@@ -16,28 +16,25 @@ returns: [3,3,3]
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Methods_With_ArrayList_remove {
-    public static ArrayList<Integer> removeInst(ArrayList<Integer> r, Integer n)
+public class Methods_With_ArrayList_remove_Instance {
+    public static ArrayList<Integer> removeInst(ArrayList<Integer> r,Integer n)
     {
 
         if(r.contains(n)){
-            r.remove(n);
+            r.removeAll(Arrays.asList(n));
         }else{
             r.clear();
-    }
-
-
+        }
 
         return r;
-
 
     }
 
     public static void main(String[] args)
     {
 
-        ArrayList<Integer>  arr = new ArrayList<>();
-        Integer[] nums = new Integer[]{3,99,3,3};
+        ArrayList<Integer> arr = new ArrayList<>();
+        Integer[] nums = new Integer[]{3,4,3,3};
         arr.addAll(Arrays.asList(nums));
 
         System.out.print(removeInst(arr,4));

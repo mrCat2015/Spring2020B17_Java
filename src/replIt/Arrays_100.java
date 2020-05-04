@@ -12,17 +12,24 @@ import java.util.Scanner;
 
 public class Arrays_100 {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        Scanner input=new Scanner(System.in);
         String[] arr = new String[5];
-
         for (int i=0;i<5;i++)
         {
             arr[i] = input.nextLine();
+        }
+        //leave above alone!  write your code below.
+        //Create another loop for your solution!
 
+String result = "";
+
+        for (String each: arr){
+            result = each.substring(0, 3);
+            System.out.println(result);
         }
 
-        for(String eachWords: arr){
 
-        }
+
+
     }
 }

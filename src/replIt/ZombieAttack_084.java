@@ -30,7 +30,8 @@ public class ZombieAttack_084 {
         int count=0;
         int result=0;
         String day="";
-        for (int i = inhabitants; i >= 0; i--){
+
+        for (int i = inhabitants; i > 0; i--){
             result=inhabitants;
             inhabitants=inhabitants/2;
             day="Day "+count;

@@ -24,6 +24,11 @@ public class Car {
         Year = carYear;
         color = carColor;
     }
+    public String toString(){
+        String result = Brand +" " + Year +  " " + Model + " " + color;
+        return result;
+
+    }
 
     public static void main(String[] args) {
         int a = 100; //local variable

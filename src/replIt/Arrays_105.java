@@ -19,11 +19,12 @@ public class Arrays_105 {
 
         for(String eachWord: words ){
             String str = eachWord.substring(0,1) + eachWord.substring(eachWord.length()-1);
-            String result = str + " ";
-            String [] arr = result.split(" ");
-            System.out.print(Arrays.toString(arr));
+          //  String result = str + " ";
+          //  String [] arr = result.split(" ");
+          //  System.out.print(Arrays.toString(arr));
         }
 
+       // System.out.println(str);
 
     }
 }

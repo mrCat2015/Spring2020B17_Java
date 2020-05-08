@@ -19,7 +19,12 @@ import java.util.Scanner;
 public class Methods_149 {
     public static void add_to_r(int[] r,int n)
     {
-     //   int [] arr = new.Arrays[]
+
+     int[] newArr = new int[r.length + 1];
+     newArr[r.length + 1] = n;
+
+        System.out.println(newArr);
+
 
 
 

@@ -18,8 +18,12 @@ public class Arrays_115 {
             words[i] = input.nextLine();
 
         }
-Arrays.sort(words);
-        System.out.println();
+        for(int i = 0; i < words.length; i++){
+            int size = words[i].length();
+            System.out.println(size);
+
+        }
+
 
 
 

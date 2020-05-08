@@ -7,9 +7,19 @@ Main.appearsTwice("java", "java is fun!") - returns false, because java appears 
 Main.appearsTwice("laptop", "I would like to buy a new laptop, because my laptop is too old.") - returns true, because laptop appears twice.
  */
 
+import java.util.Scanner;
+
 public class Assessment_test_2_4 {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        Scanner input = new Scanner(System.in);
+        String word = input.nextLine();
+        String sent = input.next();
+
+        boolean result = appearsTwice(word, sent);
+
+        System.out.println(result);
+
     }
 
     /**
@@ -18,6 +28,19 @@ public class Assessment_test_2_4 {
      * @return
      */
     public static boolean appearsTwice(String target, String sentence) {
+        int count = 0;
+
+
+        while(sentence.contains(target)) {
+
+            sentence = sentence.replaceFirst(target, "");
+            count++;
+
+            }
+        if(count == 2){
+            return true;
+        }
+
 
         return false;
     }

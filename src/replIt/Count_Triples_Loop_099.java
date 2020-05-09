@@ -22,5 +22,13 @@ public class Count_Triples_Loop_099 {
         String str = scan.next();
         int count = 0 ;
         //WRITE YOUR CODE HERE
+
+        for(int i = 0; i < str.length(); i++){
+            if(str.contains(i)  ){
+
+            }
+
+
+        }
     }
 }

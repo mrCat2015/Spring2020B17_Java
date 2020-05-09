@@ -1,0 +1,30 @@
+package Office_Hours_Saim.day2_StringAndLoops;
+/*
+
+Given a string and an index, return a string length 2 starting at the given index. If the index is too big or too small to define a string length 2, use the first 2 chars. The string length will be at least 2.
+
+
+twoChar("java", 0) → "ja"
+twoChar("java", 2) → "va"
+twoChar("java", 3) → "ja"
+twoChar("java", -1) → "ja"
+
+ */
+
+public class twoChar {
+    public static void main(String[] args) {
+        String str = "java";
+        int index = 3;
+        String result = "";
+
+        if(index+2 <=str.length() && index >= 0){
+             result = str.substring(index, index+2);
+        }else{
+            result = str.substring(0,2);
+        }
+
+
+        System.out.println(result);
+
+    }
+}

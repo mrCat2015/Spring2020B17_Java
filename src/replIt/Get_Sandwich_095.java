@@ -26,11 +26,23 @@ public class Get_Sandwich_095 {
         Scanner scan = new Scanner(System.in);
         String str = scan.next();
 
-        for(int i = 0; i<str.length(); i++){
-            if(str.contains("bread")){
+        String result = "";
 
-            }
+ //          b r e a d j a m b r e  a  d
+        //   0 1 2 3 4 5 6 7 8 9 10 11 12
+       if (str.indexOf("bread")!=str.lastIndexOf ("bread")) {
+
+
+            result = str.substring(str.indexOf("bread")+5,str.lastIndexOf("bread"));
+                }else{
+                    result = "nothing";
+                }
+
+
+
+        System.out.println(result);
         }
 
-    }
+
+
 }

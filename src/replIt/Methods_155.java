@@ -23,8 +23,20 @@ public class Methods_155 {
 
     public static void fib(int num){
 
+        int sum;
+        int num1 = 0;
+        int num2 = 1;
 
 
-        //WRITE YOUR CODE HERE
+        do{
+
+            sum = num1+num2;
+            num1 = num2;
+            num2 = sum;
+
+            num--;
+
+        }while(num>=0);
+        System.out.print(sum-num1);
     }
 }

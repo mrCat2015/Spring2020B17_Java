@@ -16,15 +16,14 @@ public class Arrays_105 {
         Scanner input = new Scanner(System.in);
         String[] words = {input.nextLine(),input.nextLine(),input.nextLine(),input.nextLine(),input.nextLine()};
 
+        String [] arr = new String[words.length];
 
-        for(String eachWord: words ){
-            String str = eachWord.substring(0,1) + eachWord.substring(eachWord.length()-1);
-          //  String result = str + " ";
-          //  String [] arr = result.split(" ");
-          //  System.out.print(Arrays.toString(arr));
+
+        for(int i = 0; i < words.length; i++){
+
+            arr[i] = words[i].substring(0,1) + words[i].substring(words[i].length()-1);
+
         }
-
-       // System.out.println(str);
-
+        System.out.print(Arrays.asList(arr));
     }
 }

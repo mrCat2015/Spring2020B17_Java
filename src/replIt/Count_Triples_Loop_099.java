@@ -23,12 +23,14 @@ public class Count_Triples_Loop_099 {
         int count = 0 ;
         //WRITE YOUR CODE HERE
 
-        for(int i = 0; i < str.length(); i++){
-            if(str.contains(i)  ){
+        for(int i = 0; i < str.length()-2; i++){
+            if(str.charAt(i) == str.charAt(i+1) && str.charAt(i)==str.charAt(i+2)){
+                count ++;
 
             }
 
 
         }
+        System.out.println(count);
     }
 }

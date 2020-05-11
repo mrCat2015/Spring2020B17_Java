@@ -20,6 +20,14 @@ public class Arrays_115 {
 
         }
 
+        Arrays.sort(words);
+
+
+
         //write your code below
+
+        System.out.println(Arrays.toString(words));
     }
+
+
 }

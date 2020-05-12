@@ -9,7 +9,30 @@ addElements(new int[][10, 40, 50, 3, 1],
 return array after adding values in the arrays:
              [21, 40, 550, 47, 1102]
  */
-
+import java.util.Arrays;
 public class Arrays_AddElements {
+    public static int[] addElements(int[] ints1, int[] ints2) {
+
+        int [] result = new int[ints1.length];
+
+        for(int i = 0; i < ints1.length; i++){
+
+                result[i] = ints1[i] + ints2[i];
+
+        }
+        System.out.println(Arrays.toString(result));
+
+
+
+return result;
+
+    }
+
+    public static void main(String[] args) {
+        int[] ints1 = {10, 40, 50, 3, 1};
+        int[] ints2 = { 11, 0, 500, 44, 1101 };
+        addElements(ints1, ints2);
+
+    }
 
 }

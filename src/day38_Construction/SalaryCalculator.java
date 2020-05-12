@@ -27,24 +27,33 @@ public class SalaryCalculator {
 
     }
 
-    public Double salary(){
+    public double salary(){
         return hourlyRate * weeklyHours * 48;
     }
 
-    public Double salaryAftertax(){
-        return salary() - stateTax() - federalTax();
+    public double salaryAfterTax(){
+        return salary() - (stateTax() + federalTax());
     }
 
-    public Double stateTax(){
+    public double stateTax(){
         return salary() * stateTaxRate;
     }
-    public Double federalTax(){
+    public double federalTax(){
         return salary() * federalTaxRate;
 
     }
     public String toString(){
-        return "Hourly Rate: "+hourlyRate+"\nWeekly Hours: "+weeklyHours+
-                "\nSalary: $"+salary();
+        return "Hourly Rate: $"+hourlyRate+
+
+                "\nWeekly Hours: "+weeklyHours+
+
+                "\nGross Salary: $"+salary()+
+
+                "\nState Tax: $"+stateTax()+
+
+                "\nFederal Tax: $"+ federalTax()+
+
+                "\nNet Salary: $"+salaryAfterTax();
 
     }
 

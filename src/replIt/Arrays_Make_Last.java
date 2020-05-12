@@ -1,6 +1,8 @@
 package replIt;
 /*
-Given an int array, print a new array with double the length where its last element is the same as the original array, and all the other elements are 0. The original array will be length 1 or more. Note: by default, a new int array contains all 0's.
+Given an int array, print a new array with double the length where its last element
+is the same as the original array, and all the other elements are 0. The original
+array will be length 1 or more. Note: by default, a new int array contains all 0's.
 Example:
 input: 4 5 6
 output: [0, 0, 0, 0, 0, 6]
@@ -15,6 +17,7 @@ output: [0, 0, 0, 0, 0, 0, 0, 4]
  */
 
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class Arrays_Make_Last {
     public static void main(String[] args) {
@@ -25,6 +28,13 @@ public class Arrays_Make_Last {
             nums[i] = scan.nextInt();
         }
         //WRITE YOUR CODE HERE
+
+        int [] arr = new int [nums.length * 2];
+        arr[arr.length-1] = nums[nums.length-1];
+
+        System.out.println(Arrays.toString(arr));
+
+
 
     }
 }

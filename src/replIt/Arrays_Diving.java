@@ -24,35 +24,23 @@ output: Total: 35.28
  */
 
 import java.util.Scanner;
+import java.util.*;
 
 public class Arrays_Diving {
     public static void main(String[] args) {
         //WRITE YOUR CODES HERE
-        Scanner input = new Scanner (System.in);
-        System.out.println("Enter score for judge 1: ");
-        float score1 = input.nextFloat();
-        System.out.println("Enter score for judge 2: ");
-        float score2 = input.nextFloat();
-        System.out.println("Enter score for judge 3: ");
-        float score3 = input.nextFloat();
-        System.out.println("Enter score for judge 4: ");
-        float score4 = input.nextFloat();
-        System.out.println("Enter score for judge 5: ");
-        float score5 = input.nextFloat();
-        System.out.println("Enter score for judge 6: ");
-        float score6 = input.nextFloat();
-        System.out.println("Enter score for judge 7: ");
-        float score7 = input.nextFloat();
+        Scanner input = new Scanner(System.in);
+        float [] score = new float[7];
+        for(int i = 0; i <= 7;  i++) {
+
+            score[i] = input.nextFloat();
+
+        }
+
+        System.out.println(Arrays.toString(score));
 
 
 
-        float [] score = new float[5];
-        score[0] = score1;
-        score[1] = score1;
-        score[2] = score1;
-        score[3] = score1;
-        score[4] = score1;
-        score[5] = score1;
 
 
 

@@ -23,21 +23,48 @@ input: 2.1
 output: Total: 35.28
  */
 
+import jdk.management.resource.internal.TotalResourceContext;
+
 import java.util.Scanner;
 import java.util.*;
+
 
 public class Arrays_Diving {
     public static void main(String[] args) {
         //WRITE YOUR CODES HERE
         Scanner input = new Scanner(System.in);
         float [] score = new float[7];
-        for(int i = 0; i <= 7;  i++) {
+        for(int i = 0; i < 7;  i++) {
+            System.out.println("Enter score for judge " + (i+1)+": ");
 
             score[i] = input.nextFloat();
 
         }
 
-        System.out.println(Arrays.toString(score));
+      //  System.out.println(Arrays.toString(score));
+
+        Arrays.sort(score);
+
+      //  System.out.println(Arrays.toString(score));
+        int count = 0;
+
+        float [] arr = new float[5];
+        for(int i = 0; i < arr.length; i++){
+            arr[i] = score[i+1];
+            count +=arr [i];
+
+        }
+      //  System.out.println(Arrays.toString(arr));
+      //  System.out.println(count);
+        System.out.println("Enter difficulty: ");
+        float diffic = input.nextFloat();
+        float total = (float) (count * diffic * 0.6);
+
+        System.out.println("Total: " + total);
+
+
+
+
 
 
 

@@ -11,6 +11,10 @@ Input: 07:05:45PM
 Output: 19:05:45
  */
 
+import day28_DateTime.DateTimeFormatting;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Scanner;
 
 public class TimeConversion {
@@ -23,6 +27,18 @@ public class TimeConversion {
         /*
          * Write your code here.
          */
+        String result = "";
+        if(s.contains("PM")){
+            result = s.replace("PM", "");
+
+        }else {
+            result = s.replace("AM", "");
+        }
+
+        for(int i = 0; i < 2; i++){
+            //result =
+        }
+
 
 
     }

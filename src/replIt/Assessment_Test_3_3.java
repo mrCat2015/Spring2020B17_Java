@@ -9,6 +9,11 @@ import java.util.Arrays;
 
 public class Assessment_Test_3_3 {
     public static void main(String[] args) {
+        String [] arr1 =  {"apple", "pear"};
+
+        //reverse(arr1);
+
+        System.out.println(Arrays.toString(reverse(arr1)));
 
     }
 
@@ -19,16 +24,17 @@ public class Assessment_Test_3_3 {
      */
     public static String[] reverse(String[] arr) {
 
-        String [] ar =  {"apple", "pear"};
-        String[]reverse = new String[ar.length];
+      //
+        String[]reverse = new String[arr.length];
 
-        for(int i = ar.length; i >=0; i--){
-            for(int j = 0; j < reverse.length; j++){
-            //    reverse = reverse[i];
-            }
+        int j = arr.length - 1;
+        for(int i = 0; i < arr.length; i++) {
+
+            reverse[i] = arr[j];
+            j--;
         }
 
 
-        return arr;
+        return reverse;
     }
 }

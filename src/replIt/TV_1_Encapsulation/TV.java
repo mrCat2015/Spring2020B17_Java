@@ -39,7 +39,7 @@ public class TV {
                 this.volumeLevel = volumeLevel;
             }
         } else{
-            System.out.println("ERROR: TV2 is either OFF or invalid Volume level");
+            System.out.println("ERROR: TV is either OFF or invalid Volume level");
 
         }
     }
@@ -47,13 +47,15 @@ public class TV {
         return channel;
     }
     public void setChannel(int channel){
-        if(channel > 0 && channel <= 120 ){
-            this.channel = channel;
-        }else{
-            System.out.println("ERROR: TV is either OFF or invalid Channel");
-        }
+        if(on){
 
+            if(channel>0 && channel<=120){
+                this.channel=channel;
 
+            } else{
+                System.out.println("ERROR: TV is either OFF or invalid Channel");
+
+            }}
     }
     public String getBrand(){
         return brand;
@@ -97,16 +99,20 @@ public class TV {
         return on;
     }
     public void turnOn(){
-        if(on == true){
+        if(isOn()){
             System.out.println("TV is already ON");
 
+        }else{
+            on = true;
         }
 
     }
     public void turnOff(){
-        if(on == false){
+        if(isOn()){
             System.out.println("TV is already OFF");
 
+        }else{
+            on = false;
         }
 
     }

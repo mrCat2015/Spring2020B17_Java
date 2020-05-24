@@ -11,13 +11,20 @@ bobThere("bac") → false
 
 public class bobThere {
     public static void main(String[] args) {
-        String str = "abcbob";
+        String str = "123abcbcdbabxyz";
+        boolean res = false;
 
         for(int i = 0; i < str.length()-2; i++){
             String result = str.substring(i,i+3);
 
-         //   if(result)
+             if((result.charAt(0) == 'b') && (result.charAt(2) == 'b')) {
+                 res = true;
+                 break;
+             }else{
+                 res = false;
+             }
 
         }
+        System.out.println(res);
     }
 }

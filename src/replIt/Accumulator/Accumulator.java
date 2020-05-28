@@ -1,4 +1,4 @@
-package replIt;
+package replIt.Accumulator;
 /*
 Write a class named Accumulator containing:
 An instance variable named sum of type integer.
@@ -13,21 +13,28 @@ The value of sum is increased by the value of the parameter.
 A method named remove that accepts an integer parameter.
 The value of sum is decreased by the value of the parameter.
 
-Override a toString method so it returns 'Sum is: X' where X is the sum instance variable
+Override a toString method so it returns 'Sum is: X' where X is the sum instance variable.
  */
 
 public class Accumulator {
     int sum;
 
-    public Accumulator(int a){
-
-
+    public Accumulator(int sum){
+        this.sum = sum;
     }
+
     public int getSum(){
         return sum;
     }
-   // public int add(int b){
-   //      return add;
-  //  }
 
+    public void add(int value){
+        sum += value;
+    }
+    public void remove(int value){
+        sum -= value;
+    }
+
+    public String toString(){
+        return "Sum is: "+sum;
+    }
 }

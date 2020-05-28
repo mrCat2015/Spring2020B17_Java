@@ -26,11 +26,16 @@ public class Value {
 
     public void setVal(int val){
         this.val = val;
+        wasModified = true;
     }
 
-    public boolean wasModified(){
-        return true;
+    public boolean wasModified() {
+        if (wasModified == true) {
+            return true;
+        } else {
+            return false;
 
+        }
     }
     public int getVal(){
         return val;

@@ -14,22 +14,19 @@ mergeStrings("java", "selenium") ==> "jsaevlaenium"
 
 public class Methods_166 {
     public static void main(String[] args) {
-        String merge = mergeStrings("one", "two");
+        String merge = mergeStrings("one", "123");
         System.out.print(merge);
     }
     public static String mergeStrings(String one, String two) {
-      String result1 = "";
-      String result2 = "";
+
       String merge = "";
 
-        for(int i = 0; i < one.length(); i++){
-            result1 += one.charAt(i);
-            for(int k = 0; k < two.length(); k++){
-                result2 +=two.charAt(k);
-                merge += ""+ one.charAt(i) + two.charAt(k);
-            }
-
-
+        for(int i = 0; i < one.length() || i < two.length(); i++){
+          if(i < one.length()){
+              merge += one.charAt(i);
+          }if(i < two.length()){
+              merge += two.charAt(i);
+          }
         }
 
 

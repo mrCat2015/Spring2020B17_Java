@@ -15,6 +15,7 @@ import day28_DateTime.DateTimeFormatting;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class TimeConversion {
@@ -27,17 +28,29 @@ public class TimeConversion {
         /*
          * Write your code here.
          */
-        String result = "";
-        if(s.contains("PM")){
-            result = s.replace("PM", "");
+        String time = s;
 
-        }else {
-            result = s.replace("AM", "");
+        String  [] str = s.split(":");
+
+
+
+        int hours = Integer.parseInt( str[0]);
+        // int min = Integer.parseInt(str[1]);
+        String sec = str[2];
+
+
+        if(time.contains("PM")){
+            hours +=12;
+
         }
 
-        for(int i = 0; i < 2; i++){
-            //result =
-        }
+
+
+
+        System.out.println(Arrays.toString(str));
+
+
+
 
 
 
